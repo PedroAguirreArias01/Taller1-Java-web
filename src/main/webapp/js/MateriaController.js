@@ -7,7 +7,7 @@
 
 'use strict';
 
-var listaMaterias=[{id:1,materia:'software II',creditos:'4'},{id:2,materia:'software I',creditos:'4'}]
+var listaMaterias=[{id:1,nombre:'software II',creditos:'4', profesor:'Daniela Torres', horario:'Lunes 08:00-10:00', carrera:'Ingenieria de sistemas'},{id:2,nombre:'software I',creditos:'4', profesor:'Pedro Aguirre', horario:'Martes 08:00-10:00', carrera:'Ingenieria de sistemas'},{id:3,nombre:'software III',creditos:'4', profesor:'Daniela Torres', horario:'Martes 08:00-10:00', carrera:'Ingenieria de sistemas'}]
 
 module.controller('MateriaCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
     //listar

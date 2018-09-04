@@ -1,6 +1,6 @@
 'use strict';
 
-var listaMunicipios=[{id:1,nombre:'Tunja'}, {id:2,nombre:'Duitama'},{id:3,nombre:'Sogamoso'}];
+var listaMunicipios=[{id:1,nombre:'Tunja'}, {id:2,nombre:'Duitama'},{id:3,nombre:'Sogamoso'}, {id:4,nombre:'Umbita'}, {id:5,nombre:'Ramiriqui'}];
 
 module.controller('MunicipioCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
     //listar
@@ -19,7 +19,6 @@ module.controller('MunicipioCtrl', ['$scope', '$filter', '$http', function ($sco
     $scope.guardar = function () {
         $scope.errores = {};
         var error = false;
-        
         if (error)
             return;
         

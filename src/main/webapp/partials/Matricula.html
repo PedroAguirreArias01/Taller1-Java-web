@@ -14,11 +14,19 @@
                     Semestre
                 </th>
                 <th>
+                    Estudiante
+                </th>
+                <th>
+                    Materia
+                </th>
+                <th>
                 </th>
             </tr>
             <tr ng-repeat="row in lista">
                 <td>{{row.annio}}</td>
                 <td>{{row.semestre}}</td>
+                <td>{{row.estudiante}}</td>
+                <td>{{row.materia}}</td>
                 <td class="row">
                     <button type="button" class="btn btn-primary" ng-click="editar(row)">
                         <span class="glyphicon glyphicon-pencil"></span>Editar
@@ -28,7 +36,6 @@
                     </button>
                 </td>
             </tr>
-
         </table>
         <br/>
     </div>

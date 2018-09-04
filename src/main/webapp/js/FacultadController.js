@@ -1,6 +1,6 @@
 'use strict';
 
-var listaFacultades=[{id:1,nombre:'ingenieria'}, {id:2,nombre:'educación'},{id:3,nombre:'musica'}];
+var listaFacultades=[{id:1,nombre:'Ingenieria'}, {id:2,nombre:'Educación'},{id:3,nombre:'Musica'}];
 
 module.controller('FacultadCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
     //listar

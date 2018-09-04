@@ -9,19 +9,25 @@
         <table class="resultados table table-striped">
             <tr>
                 <th>
-                    nombre
+                    Nombre
                 </th>
                 <th>
-                    apellido
+                    Apellido
                 </th>
                 <th>
-                    codigo
+                    Codigo
                 </th>
                 <th>
-                    documento
+                    Documento
                 </th>
                 <th>
-                    fechas nacimiento
+                    Fechas Nacimiento
+                </th>
+                <th>
+                    Municipio
+                </th>
+                <th>
+                    Carrera
                 </th>
                 <th>
                 </th>
@@ -32,6 +38,8 @@
                 <td>{{row.codigo}}</td>
                 <td>{{row.documento}}</td>
                 <td>{{row.fechaNacimiento}}</td>
+                <td>{{row.municipio.nombre}}</td>
+                <td>{{row.carrera.nombre}}</td>
                 <td class="row">
                     <button type="button" class="btn btn-primary" ng-click="editar(row)">
                         <span class="glyphicon glyphicon-pencil"></span>Editar
@@ -41,7 +49,6 @@
                     </button>
                 </td>
             </tr>
-            
         </table>
         <br/>
     </div>
@@ -50,7 +57,6 @@
 <div class="panel panel-primary" ng-show="panelEditar">
     <div class="panel-heading">Parametrizaci&oacute;n de Estudiantes</div>
     <div class="panel-body">
-
         <div class="form-group col-md-6" ng-class="errores.nombre ? 'error' : ''">
             <label for="nombre">Nombre</label>
             <input id="nombre" 
@@ -60,7 +66,7 @@
                    placeholder="nombre"/>
             <div ng-show="errores.nombre">{{errores.nombre}}</div>
         </div> 
-        
+
         <div class="form-group col-md-6" ng-class="errores.apellido ? 'error' : ''">
             <label for="nombre">Apellido</label>
             <input id="nombre" 
@@ -70,7 +76,7 @@
                    placeholder="nombre"/>
             <div ng-show="errores.apellido">{{errores.apellido}}</div>
         </div> 
-        
+
         <div class="form-group col-md-6" ng-class="errores.codigo ? 'error' : ''">
             <label for="nombre">Codigo</label>
             <input id="nombre" 
@@ -80,7 +86,7 @@
                    placeholder="nombre"/>
             <div ng-show="errores.codigo">{{errores.codigo}}</div>
         </div> 
-        
+
         <div class="form-group col-md-6" ng-class="errores.documento ? 'error' : ''">
             <label for="nombre">Documento</label>
             <input id="nombre" 
@@ -99,7 +105,22 @@
                    placeholder="nombre"/>
             <div ng-show="errores.fechaNacimiento">{{errores.fechaNacimiento}}</div>
         </div> 
-        
+        <div class="form-group col-md-6" ng-class="errores.municipio ? 'error' : ''">
+            <label for="nombre">Municipio</label>
+            <select id="municipio" class="form-control" 
+                    ng-model="datosFormulario.municipio"
+                    ng-options="option.nombre for option in municipio track by option.id">
+            </select>
+            <div ng-show="errores.municipio">{{errores.municipio}}</div>
+        </div> 
+        <div class="form-group col-md-6" ng-class="errores.carrera ? 'error' : ''">
+            <label for="nombre">Carrera</label>
+            <select id="municipio" class="form-control" 
+                    ng-model="datosFormulario.carrera"
+                    ng-options="option.nombre for option in carrera track by option.id">
+            </select>
+            <div ng-show="errores.municipio">{{errores.municipio}}</div>
+        </div> 
         <div class=" form-group col-md-8 ">
             <button type="button" class="btn btn-primary" ng-click="guardar()">Aceptar</button>
             <button type="button" class="btn btn-warning" ng-click="cancelar()">Cancelar</button>

@@ -7,7 +7,7 @@
 
 'use strict';
 
-var listaProfesores = [{id:1,nombre:'Daniela', apellido:'Torres'}, {id:2,nombre:'Pedro', apellido:'Aguirre',documento:'1234567987'}];
+var listaProfesores = [{id:1,nombre:'Daniela', apellido:'Torres', documento:"65488"}, {id:2,nombre:'Pedro', apellido:'Aguirre',documento:'1234567987'}];
 
 module.controller('ProfesorCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
     //listar
