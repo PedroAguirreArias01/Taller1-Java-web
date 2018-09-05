@@ -1,7 +1,7 @@
 'use strict';
 
 var listaCarreras = [{id: 1, nombre: 'Ingenieria de Sistemas', facultad: {id: 1, nombre: 'Ingenieria'}},
-    {id:2, nombre: 'Artes', facultad: {id: 2, nombre: 'Educación'}}];
+    {id: 2, nombre: 'Artes', facultad: {id: 2, nombre: 'Educación'}}];
 
 module.controller('CarreraCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
         //listar

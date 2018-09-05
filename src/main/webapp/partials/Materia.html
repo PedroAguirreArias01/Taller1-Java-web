@@ -27,8 +27,10 @@
                 <td>{{row.nombre}}</td>
                 <td>{{row.creditos}}</td>
                 <td>{{row.profesor.nombre}}</td>
-                <td>{{row.horario}}</td>
-                <td>{{row.carrera}}</td>
+                <td>
+                    <button type="button" class="btn btn-default" ng-click="verHorario(row)">Ver Horario</button>
+                </td>
+                <td>{{row.carrera.nombre}}</td>
                 <td class="row">
                     <button type="button" class="btn btn-default" ng-click="editar(row)">
                         <span class="glyphicon glyphicon-pencil"></span>Editar
@@ -79,12 +81,52 @@
                     ng-model="datosFormulario.carrera"
                     ng-options="option.nombre for option in carrera track by option.id">
             </select>
-            <div ng-show="errores.municipio">{{errores.municipio}}</div>
+            <div ng-show="errores.carrera">{{errores.carrera}}</div>
+        </div>
+        <div class="form-group col-md-6" ng-class="errores.horarios ? 'error' : ''">
+            <label for="nombre">Horarios</label>
+            <select id="carrera" class="form-control" 
+                    ng-model="datosFormulario.carrera"
+                    ng-options="option.nombre for option in carrera track by option.id">
+            </select>
+            <div ng-show="errores.carrera">{{errores.carrera}}</div>
         </div>
         <div class="btn-group">
             <button type="button" class="btn btn-default" ng-click="guardar()">Aceptar</button>
             <button type="button" class="btn btn-default" ng-click="cancelar()">Cancelar</button>
         </div>    
+    </div>
+</div>
+<div class="panel panel-primary" ng-show="panelVerHorario">
+    <div class="panel-body">
+        <table class="resultados table table-striped">
+            <tr>
+                <th>
+                    Dia seman
+                </th>
+                <th>
+                    Hora Inicio
+                </th>
+                <th>
+                    Hora Fin
+                </th>
+                <th>
+                </th>
+            </tr>
+            <tr ng-repeat="row in lista">
+                <td>{{row.diaSemana}}</td>
+                <td>{{row.horaInicio}}</td>
+                <td>{{row.horaFin}}</td>
+                <td class="row">
+                    <button type="button" class="btn btn-primary" ng-click="editar(row)">
+                        <span class="glyphicon glyphicon-pencil"></span>Editar
+                    </button>
+                    <button type="button" class="btn btn-danger" ng-click="eliminar(row)">
+                        <span class="glyphicon glyphicon-remove"></span>Eliminar
+                    </button>
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
 
