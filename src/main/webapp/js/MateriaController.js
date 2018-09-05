@@ -7,11 +7,13 @@
 
 'use strict';
 
-var listaMaterias=[{id:1,nombre:'software II',creditos:'4', profesor:'Daniela Torres', horario:'Lunes 08:00-10:00', carrera:'Ingenieria de sistemas'},{id:2,nombre:'software I',creditos:'4', profesor:'Pedro Aguirre', horario:'Martes 08:00-10:00', carrera:'Ingenieria de sistemas'},{id:3,nombre:'software III',creditos:'4', profesor:'Daniela Torres', horario:'Martes 08:00-10:00', carrera:'Ingenieria de sistemas'}]
+var listaMaterias=[{id:1,nombre:'software II',creditos:'4', profesor:{id:1,nombre:'Daniela', apellido:'Torres', documento:"65488"}, horario:'Lunes 08:00-10:00', carrera:'Ingenieria de sistemas'},{id:2,nombre:'software I',creditos:'4', profesor:{id:1,nombre:'Daniela', apellido:'Torres', documento:"65488"}, horario:'Martes 08:00-10:00', carrera:'Ingenieria de sistemas'},{id:3,nombre:'software III',creditos:'4', profesor:{id:2,nombre:'Pedro', apellido:'Aguirre',documento:'1234567987'}, horario:'Martes 08:00-10:00', carrera:'Ingenieria de sistemas'}]
 
 module.controller('MateriaCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
     //listar
     $scope.lista = listaMaterias;
+    $scope.profesor = listaProfesores;
+    $scope.carrera = listaCarreras;
     $scope.datosFormulario = {};
     $scope.panelEditar = false;
     
