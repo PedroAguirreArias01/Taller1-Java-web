@@ -42,8 +42,12 @@
         };
                 //ver hoario
         $scope.verHorario = function (data) {
+            $scope.horario ={data};
             $scope.panelVerHorario = true;
             
+//            document.write(data)
+//            console.log(data);
+            $scope.errores = {};
         };
         
         $scope.guardarHorario = function () {

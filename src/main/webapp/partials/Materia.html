@@ -28,7 +28,7 @@
                 <td>{{row.creditos}}</td>
                 <td>{{row.profesor.nombre}}</td>
                 <td>
-                    <button type="button" class="btn btn-default" ng-click="verHorario(row)">Ver Horario</button>
+                    <button type="button" class="btn btn-default" ng-click="verHorario(row.horario)">Ver Horario</button>
                 </td>
                 <td>{{row.carrera.nombre}}</td>
                 <td class="row">
@@ -113,7 +113,7 @@
                 <th>
                 </th>
             </tr>
-            <tr ng-repeat="row in lista">
+            <tr ng-repeat="row in horario">
                 <td>{{row.diaSemana}}</td>
                 <td>{{row.horaInicio}}</td>
                 <td>{{row.horaFin}}</td>
