@@ -9,14 +9,13 @@ var listaHorario = [{id: 1, diaSemana: 'Lunes', horaInicio: '08:00', horaFin: '1
 module.controller('HorarioCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
         //listar
         $scope.lista = listaHorario;
-        $scope.id = 2;
 
         $scope.datosFormulario = {};
-        $scope.panelEditar = false;
+        $scope.panelEditarHorario = false;
 
         //guardar
         $scope.nuevo = function () {
-            $scope.panelEditar = true;
+            $scope.panelEditarHorario = true;
             $scope.datosFormulario = {};
         };
 
@@ -29,16 +28,16 @@ module.controller('HorarioCtrl', ['$scope', '$filter', '$http', function ($scope
                 $scope.datosFormulario.id = $scope.id++;
                 $scope.lista.push($scope.datosFormulario);
             }
-            $scope.panelEditar = false;
+            $scope.panelEditarHorario = false;
         };
         $scope.cancelar = function () {
-            $scope.panelEditar = false;
+            $scope.panelEditarHorario = false;
             $scope.datosFormulario = {};
         };
 
         //editar
         $scope.editar = function (data) {
-            $scope.panelEditar = true;
+            $scope.panelEditarHorario = true;
             $scope.datosFormulario = data;
         };
         //eliminar
