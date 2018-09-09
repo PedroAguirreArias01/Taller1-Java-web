@@ -1,21 +1,21 @@
 .subpanel{
-   padding: 0px;
+    padding: 0px;
 }
 
 .subpanel>.panel-body {
-   padding-top: 0px;
-   padding-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .subpanel>.panel-heading {
-   padding-top: 0px;
-   padding-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .subpanel>.panel-body>.form-group{
-   padding-top: 0px;
-   padding-bottom: 0px;
-   margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
 }
 
 #iframeContenido{
@@ -26,25 +26,25 @@
 }
 
 .btn-menu {
-  width: 120px;
-  background-color: #FFFFFF;
-  color: #000000;
-  text-align: center;
-  float: left;
-  font-size: large;
-  font-weight: bolder;
-  cursor: pointer;
-  margin: 10px;
+    width: 120px;
+    background-color: #FFFFFF;
+    color: #000000;
+    text-align: center;
+    float: left;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 10px;
 }
 
 .btn-menu>button {
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-  border: 6px solid #337ab7;
-  font-size: 200%;
-  background-color: #FFFFFF;
-  color: #000000;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 6px solid #337ab7;
+    font-size: 200%;
+    background-color: #FFFFFF;
+    color: #000000;
 
 }
 

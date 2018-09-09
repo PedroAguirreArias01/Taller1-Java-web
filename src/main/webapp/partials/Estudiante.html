@@ -1,5 +1,3 @@
-
-
 <div class="panel panel-primary" ng-hide="panelEditar">
     <div class="panel-heading">Parametrizaci&oacute;n de Estudiantes</div>
     <div class="panel-body">
@@ -96,12 +94,17 @@
             <div ng-show="errores.documento">{{errores.documento}}</div>
         </div> 
         <div class="form-group col-md-6" ng-class="errores.fechaNacimiento ? 'error' : ''">
-            <label for="nombre">Fecha Nacimiento</label>
-            <input id="nombre" 
-                   class="form-control" 
-                   type="text"
-                   ng-model="datosFormulario.fechaNacimiento"
-                   placeholder="nombre"/>
+            <label for="fecha">Fecha Nacimiento</label>
+            <div class="input-group">
+                <input id="fechaNacimiento" 
+                       class="form-control datepicker" 
+                       type="text" 
+                       ng-model="datosFormulario.fechaNacimiento"/>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+            </div>
+            <script>
+                $('#fechaNacimiento').datepicker({format: 'dd/mm/yyyy', language: "es"}).data('datepicker');
+            </script>
             <div ng-show="errores.fechaNacimiento">{{errores.fechaNacimiento}}</div>
         </div> 
         <div class="form-group col-md-6" ng-class="errores.municipio ? 'error' : ''">

@@ -16,7 +16,6 @@ app.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/Materia', {templateUrl: 'partials/Materia.html', controller: 'MateriaCtrl'});
         $routeProvider.when('/Horario', {templateUrl: 'partials/Horario.html', controller: 'HorarioCtrl'});
         $routeProvider.when('/Matricula', {templateUrl: 'partials/Matricula.html', controller: 'MatriculasCtrl'});
-
         $routeProvider.otherwise({redirectTo: '/'});
     }]);
 

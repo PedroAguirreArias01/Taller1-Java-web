@@ -1,8 +1,8 @@
 'use strict';
 
 var listaEstudiantes =
-        [{id: 1, nombre: 'Daniela', apellido: 'Torres', codigo: '201511109', documento: '1234567987', fechaNacimiento: '20/12/97', municipio: {id: 4, nombre: 'Umbita'}, carrera: {nombre: 'Ingenieria de Sistemas', facultad: {id: 1, nombre: 'Ingenieria'}}},
-            {id: 2, nombre: 'Pedro', apellido: 'Aguirre', codigo: '201320143', documento: '1234567987', fechaNacimiento: '23/12/95', municipio: {id: 5, nombre: 'Ramiriqui'}, carrera: {nombre: 'Ingenieria de Sistemas', facultad: {id: 1, nombre: 'Ingenieria'}}}];
+        [{id: 1, nombre: 'Daniela', apellido: 'Torres', codigo: '201511109', documento: '1234567987', fechaNacimiento: '20/12/1997', municipio: {id: 4, nombre: 'Umbita'}, carrera: {nombre: 'Ingenieria de Sistemas', facultad: {id: 1, nombre: 'Ingenieria'}}},
+            {id: 2, nombre: 'Pedro', apellido: 'Aguirre', codigo: '201320143', documento: '1234567987', fechaNacimiento: '23/12/1995', municipio: {id: 5, nombre: 'Ramiriqui'}, carrera: {nombre: 'Ingenieria de Sistemas', facultad: {id: 1, nombre: 'Ingenieria'}}}];
 
 module.controller('EstudianteCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
         //listar
@@ -40,6 +40,8 @@ module.controller('EstudianteCtrl', ['$scope', '$filter', '$http', function ($sc
             $scope.panelEditar = true;
             $scope.datosFormulario = data;
         };
+
+
         //eliminar
         $scope.eliminar = function (data) {
             if (confirm('\xbfDesea elminar este registro?')) {
